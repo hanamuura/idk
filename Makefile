@@ -11,7 +11,7 @@ SRCS = $(SRC_DIR)/main.cpp $(SRC_DIR)/lexer.cpp $(SRC_DIR)/parser.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(TARGET)
-	@echo "Builded. Executable file: $(TARGET)"
+	@echo "Built. Executable file: $(TARGET)"
 
 $(TARGET): $(OBJS)
 	@echo "Linking..."
@@ -27,4 +27,8 @@ clean:
 rebuild: clean all
 	@echo "Rebuild process started"
 
-.PHONY: all clean rebuild
+debug: CXXFLAGS += -g
+debug: $(TARGET)
+	@echo "Built in debug mode"
+
+.PHONY: all clean rebuild debug

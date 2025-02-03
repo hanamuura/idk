@@ -55,8 +55,9 @@ int main() {
     }
 #endif
     std::vector<Token> tokens = {
-        {TokenType::Identifier, "x"}, {TokenType::Assignment, "="}, {TokenType::Number, "5"}
-        , {TokenType::Plus, "+"}, {TokenType::Number, "4"}, {TokenType::Asterisk, "*"}, {TokenType::Number, "2"}
+        {TokenType::Identifier, "x"}, {TokenType::Assignment, "="}, {TokenType::Number, "5"},
+        {TokenType::Plus, "+"}, {TokenType::Number, "4"}, {TokenType::Asterisk, "*"},
+        {TokenType::Number, "2"}
     };
     auto parser = new Parser(tokens);
     auto ast = parser->parse();

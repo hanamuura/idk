@@ -4,6 +4,7 @@
 #include <vector>
 #include <memory>
 #include <stdexcept>
+#include <iostream>
 #include "token.h"
 
 
@@ -27,6 +28,7 @@ private:
     std::shared_ptr<ASTNode> parse_expression();
     std::shared_ptr<ASTNode> parse_term();
     std::shared_ptr<ASTNode> parse_factor();
+    std::shared_ptr<ASTNode> parse_assignment();
 };
 
 #endif
